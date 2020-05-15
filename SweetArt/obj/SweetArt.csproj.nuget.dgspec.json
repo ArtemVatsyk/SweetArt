@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samal\\Source\\Repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj": {}
+    "C:\\Users\\samal\\source\\repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samal\\Source\\Repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj": {
+    "C:\\Users\\samal\\source\\repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samal\\Source\\Repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj",
+        "projectUniqueName": "C:\\Users\\samal\\source\\repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj",
         "projectName": "SweetArt",
-        "projectPath": "C:\\Users\\samal\\Source\\Repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj",
+        "projectPath": "C:\\Users\\samal\\source\\repos\\ArtemVatsyk\\SweetArt\\SweetArt\\SweetArt.csproj",
         "packagesPath": "C:\\Users\\samal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samal\\Source\\Repos\\ArtemVatsyk\\SweetArt\\SweetArt\\obj\\",
+        "outputPath": "C:\\Users\\samal\\source\\repos\\ArtemVatsyk\\SweetArt\\SweetArt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,6 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
