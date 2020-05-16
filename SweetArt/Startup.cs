@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SweetArt.Models;
 
 namespace SweetArt
 {
@@ -25,6 +27,8 @@ namespace SweetArt
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = "Server = localhost; Database = cakedb; Trusted_Connection = True;";
+            services.AddDbContext<CakeContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
         }
 

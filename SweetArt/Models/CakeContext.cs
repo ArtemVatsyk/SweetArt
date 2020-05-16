@@ -7,14 +7,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SweetArt.Models
 {
-    public class CakeContext : DbContext
+    public sealed class CakeContext : DbContext
     {
-        public CakeContext(DbContextOptions options) : base("DefaultConnection") { }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Product> Products;
-        public DbSet<Order> Orders;
-        public DbSet<Customer> Customers;
-        public DbSet<OrderItem> OrderItems;
-        public DbSet<Category> Categories;
+        public CakeContext(DbContextOptions<CakeContext> options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
+
     }
 }
