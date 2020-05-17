@@ -17,7 +17,6 @@ namespace SweetArt.Models
 
         public CakeContext(DbContextOptions<CakeContext> options) : base(options)
         {
-            Database.EnsureCreated();
         }
 
     }

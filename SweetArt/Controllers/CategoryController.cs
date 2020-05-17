@@ -17,6 +17,10 @@ namespace SweetArt.Controllers
         public CategoryController(CakeContext context)
         {
             db = context;
+            if (!db.Categories.Any())
+            {
+                db.Categories.Add(new Category { Id = Guid.NewGuid(), Name = "Wedding cake"});
+            }
         }
 
         [HttpGet]

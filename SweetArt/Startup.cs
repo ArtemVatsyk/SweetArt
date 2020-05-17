@@ -27,7 +27,7 @@ namespace SweetArt
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = "Server = localhost; Database = cakedb; Trusted_Connection = True;";
+            string connection = "Data Source=sweetartsm.database.windows.net;Initial Catalog=cakedb;User ID=ain_ell;Password=Qwerty000;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<CakeContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
         }
