@@ -17,12 +17,6 @@ namespace SweetArt.Controllers
         public CategoryController(CakeContext context)
         {
             db = context;
-            if (!db.Categories.Any())
-            {
-                db.Categories.Add(new Category { Id = Guid.NewGuid(), Name = "Wedding cake" });
-                db.Categories.Add(new Category { Id = Guid.NewGuid(), Name = "Cake" });
-                db.SaveChanges();
-            }
         }
 
         [HttpGet]
@@ -31,7 +25,6 @@ namespace SweetArt.Controllers
             return await db.Categories.ToListAsync();
         }
 
-        // GET api/category/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> Get(Guid id)
         {
@@ -41,7 +34,6 @@ namespace SweetArt.Controllers
             return new ObjectResult(category);
         }
 
-        // POST api/users
         [HttpPost]
         public async Task<ActionResult<Category>> Post(Category category)
         {
@@ -55,25 +47,23 @@ namespace SweetArt.Controllers
             return Ok(category);
         }
 
-        // PUT api/users/
         [HttpPut]
-        public async Task<ActionResult<Category>> Put(Category user)
+        public async Task<ActionResult<Category>> Put(Category category)
         {
-            if (user == null)
+            if (category == null)
             {
                 return BadRequest();
             }
-            if (!db.Categories.Any(x => x.Id == user.Id))
+            if (!db.Categories.Any(x => x.Id == category.Id))
             {
                 return NotFound();
             }
 
-            db.Update(user);
+            db.Update(category);
             await db.SaveChangesAsync();
-            return Ok(user);
+            return Ok(category);
         }
 
-        // DELETE api/users/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Category>> Delete(Guid id)
         {
