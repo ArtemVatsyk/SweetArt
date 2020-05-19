@@ -19,5 +19,8 @@ namespace SweetArt.Models
         {
         }
 
+        public CakeContext()
+        {
+        }
     }
 }

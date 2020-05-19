@@ -17,11 +17,6 @@ namespace SweetArt.Controllers
         public ProductController(CakeContext context)
         {
             db = context;
-            if (!db.Products.Any())
-            {
-                db.Products.Add(new Product { Id = Guid.NewGuid(), Name = "Red cake", CategoryId = Guid.Parse("0b45ff45-bb93-46cc-b566-62decfbf3dad"), Description = "All cake is red", Weight = 22.4 });
-                db.SaveChanges();
-            }
         }
 
         [HttpGet]

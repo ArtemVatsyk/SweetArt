@@ -13,17 +13,14 @@ namespace SweetArt.Controllers
     [Route("api/[controller]")]
     public class CategoryController : ControllerBase
     {
+
         CakeContext db;
         public CategoryController(CakeContext context)
         {
             db = context;
-            if (!db.Categories.Any())
-            {
-                db.Categories.Add(new Category { Id = Guid.NewGuid(), Name = "Wedding cake"});
-            }
         }
 
-        [HttpGet]
+     
         public async Task<ActionResult<IEnumerable<Category>>> Get()
         {
             return await db.Categories.ToListAsync();

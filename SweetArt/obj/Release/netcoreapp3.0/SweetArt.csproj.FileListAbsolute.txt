@@ -119,7 +119,6 @@ C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\bin\Release\netcoreapp
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\SweetArt.csprojAssemblyReference.cache
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\staticwebassets\SweetArt.StaticWebAssets.Manifest.cache
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\staticwebassets\SweetArt.StaticWebAssets.xml
-C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\SweetArt.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\SweetArt.AssemblyInfoInputs.cache
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\SweetArt.AssemblyInfo.cs
 C:\Users\samal\source\repos\ArtemVatsyk\SweetArt\SweetArt\obj\Release\netcoreapp3.0\SweetArt.RazorTargetAssemblyInfo.cache
